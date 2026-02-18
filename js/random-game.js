@@ -4,7 +4,7 @@
   const button = document.createElement('a');
   button.id = 'random-game-btn';
   button.className = 'n284';
-  button.innerHTML = '🎲 <span>Random Game</span>';
+  button.innerHTML = '🎲 <span>Pick Random</span>';
   button.href = '#';
   
   // Add styles

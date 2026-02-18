@@ -1,15 +1,7 @@
 (function() {
   'use strict';
 
-  const path = window.location.pathname.toLowerCase();
-  const isSingleGamePage =
-    path.startsWith('/class/') ||
-    !!document.getElementById('test_app_frame') ||
-    !!document.getElementById('gameFrameWrapper');
 
-  if (isSingleGamePage) {
-    return;
-  }
 
   // Create and inject styles
   const styles = `
