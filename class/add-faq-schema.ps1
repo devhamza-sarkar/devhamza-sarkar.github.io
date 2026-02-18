@@ -52,8 +52,35 @@ Get-ChildItem $folderPath -Filter *.html -Recurse | ForEach-Object {
 
     $scriptTag = "`n<script type=`"application/ld+json`">$schema</script>`n"
 
-    # Insert before </head>
-    $updatedContent = $content -replace "</head>", "$scriptTag</head>"
+    # Insert before <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSTHCSNXTK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HSTHCSNXTK');
+</script>
+</head>
+    $updatedContent = $content -replace "<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSTHCSNXTK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HSTHCSNXTK');
+</script>
+</head>", "$scriptTag<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSTHCSNXTK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HSTHCSNXTK');
+</script>
+</head>"
 
     Set-Content -Path $filePath -Value $updatedContent -Encoding UTF8
 
