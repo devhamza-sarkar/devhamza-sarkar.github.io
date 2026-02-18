@@ -102,6 +102,29 @@
             }
         }
   </style>
+  <style>
+.dmca-required-info {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+.dmca-required-info > li {
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e3e3e3;
+}
+.dmca-required-info > li:last-child {
+  border-bottom: none;
+}
+.dmca-required-info b {
+  color: #2b5a3b;
+  font-size: 1.08em;
+}
+.dmca-required-info span {
+  display: block;
+  margin-top: 0.3em;
+}
+  </style>
 </head>
 <body>
     <div id="root">
@@ -122,7 +145,7 @@
             <div class="n47" style="margin-top:0;">
                 <h2 style="color:#3e643d;font-size:1.3rem;font-weight:800;margin-top:0;">Required Information</h2>
                 <p style="margin-bottom:1.2rem;">To ensure your request is processed quickly, your DMCA notice must include the following:</p>
-                <ol style="margin-bottom:2rem;">
+                <ul class="dmca-required-info">
                     <li><b>Signature</b><br><span style="color:#444;">A physical or electronic signature of the copyright owner or a person authorized to act on their behalf.</span></li>
                     <li><b>Identification of the copyrighted work</b><br><span style="color:#444;">A description of the copyrighted work claimed to have been infringed. If multiple works are involved, you may provide a representative list.</span></li>
                     <li><b>Identification of the infringing material</b><br><span style="color:#444;">The exact URL or location of the content you believe is infringing, along with sufficient information to help us locate it.</span></li>
@@ -136,7 +159,7 @@
                     </li>
                     <li><b>Good faith statement</b><br><span style="color:#444;">A statement that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law.</span></li>
                     <li><b>Accuracy and authority statement</b><br><span style="color:#444;">A statement that the information provided is accurate and, under penalty of perjury, that you are the copyright owner or authorized to act on behalf of the owner.</span></li>
-                </ol>
+                </ul>
                 <h2 style="color:#3e643d;font-size:1.3rem;font-weight:800;">Response Process</h2>
                 <p style="margin-bottom:1.2rem;">Once a complete and valid notice is received, DuckMath will investigate the claim and remove or disable access to the reported content as quickly as possible, where appropriate.</p>
                 <p style="margin-bottom:2rem;">If additional information is required, we may contact you using the details provided in your notice.</p>

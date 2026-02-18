@@ -112,7 +112,7 @@
     const button = document.createElement('button');
     button.className = 'n98';
     button.setAttribute('aria-label', 'Random Game');
-    button.textContent = '\uD83C\uDFB2 Random Game';
+    button.textContent = '\uD83C\uDFB2 Pick Random';
 
     button.addEventListener('click', function(e) {
       e.preventDefault();

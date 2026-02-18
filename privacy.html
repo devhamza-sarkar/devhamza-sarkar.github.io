@@ -32,6 +32,23 @@
       margin: 0;
       min-height: 100vh;
     }
+    .rights-contact-flex {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .rights-contact-flex > div {
+      flex: 1 1 260px;
+      min-width: 200px;
+    }
+    @media (max-width: 700px) {
+      .rights-contact-flex {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+    }
     .n87 {
       background: linear-gradient(120deg,#f7fafc 60%,#e3f0e8 100%);
       border-radius: 16px;
@@ -352,13 +369,19 @@
         <h2 id="your-rights">Data Security</h2>
         <p>We implement reasonable security measures to protect your information from unauthorized access, alteration, or disclosure. However, no internet transmission or storage system is completely secure, and we cannot guarantee absolute security.</p>
         <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-          <li>Request access to your personal information</li>
-          <li>Request correction or deletion of your data</li>
-          <li>Disable cookies through browser settings</li>
-        </ul>
-        <p>To make a request, contact us at:<br><span class="n83">sarkargames.info@gmail.com</span></p>
+        <div class="rights-contact-flex">
+          <div>
+            <p>You have the right to:</p>
+            <ul>
+              <li>Request access to your personal information</li>
+              <li>Request correction or deletion of your data</li>
+              <li>Disable cookies through browser settings</li>
+            </ul>
+          </div>
+          <div style="min-width:220px;">
+            <p>To make a request, contact us at:<br><span class="n83" style="color: #2563eb; font-size: 24px; font-weight: bold;">sarkargames.info@gmail.com</span></p>
+          </div>
+        </div>
         <h2 id="website-rules">Third-Party Services and Links</h2>
         <p>DuckMath may contain links to third-party websites or embedded content. These external sites have their own privacy policies, and we are not responsible for their practices. We encourage users to review the privacy policies of any third-party services they access.</p>
         <h2>Children’s Privacy</h2>
