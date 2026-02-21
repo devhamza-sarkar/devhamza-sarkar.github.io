@@ -107,3 +107,35 @@ document.addEventListener('DOMContentLoaded', function() {
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "vke5joxz7z");
+
+     // Prevent scrolling when keys are pressed inside the iframe
+    const iframe = document.getElementById('test_app_frame');
+    let isIframeFocused = false;
+
+    // Detect mouse over iframe
+    iframe.addEventListener('mouseenter', () => { isIframeFocused = true; });
+    iframe.addEventListener('mouseleave', () => { isIframeFocused = false; });
+
+    // Also detect focus (for accessibility)
+    iframe.addEventListener('focus', () => { isIframeFocused = true; });
+    iframe.addEventListener('blur', () => { isIframeFocused = false; });
+
+    window.addEventListener('keydown', function(e) {
+        if (isIframeFocused) {
+            // List of keys to block
+            const blockedKeys = [
+                ' ', // Spacebar
+                'ArrowUp',
+                'ArrowDown',
+                'ArrowLeft',
+                'ArrowRight',
+                'PageUp',
+                'PageDown',
+                'Home',
+                'End'
+            ];
+            if (blockedKeys.includes(e.key)) {
+                e.preventDefault();
+            }
+        }
+    }, { passive: false });
