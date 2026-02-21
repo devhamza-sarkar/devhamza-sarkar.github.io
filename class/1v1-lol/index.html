@@ -1272,6 +1272,40 @@
     <script src="/js/account-sidebar.js"></script>
    <script src="/js/favicon-customizer.js"></script>
    <script src="/report-system.js" data-game-id="1V1 Lol" data-game-title="1V1 Lol"></script>
+
+    <script>
+    // Prevent scrolling when keys are pressed inside the iframe
+    const iframe = document.getElementById('test_app_frame');
+    let isIframeFocused = false;
+
+    // Detect mouse over iframe
+    iframe.addEventListener('mouseenter', () => { isIframeFocused = true; });
+    iframe.addEventListener('mouseleave', () => { isIframeFocused = false; });
+
+    // Also detect focus (for accessibility)
+    iframe.addEventListener('focus', () => { isIframeFocused = true; });
+    iframe.addEventListener('blur', () => { isIframeFocused = false; });
+
+    window.addEventListener('keydown', function(e) {
+        if (isIframeFocused) {
+            // List of keys to block
+            const blockedKeys = [
+                ' ', // Spacebar
+                'ArrowUp',
+                'ArrowDown',
+                'ArrowLeft',
+                'ArrowRight',
+                'PageUp',
+                'PageDown',
+                'Home',
+                'End'
+            ];
+            if (blockedKeys.includes(e.key)) {
+                e.preventDefault();
+            }
+        }
+    }, { passive: false });
+    </script>
 </body>
 </html>
 
