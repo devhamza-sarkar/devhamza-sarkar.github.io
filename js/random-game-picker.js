@@ -67,10 +67,26 @@
 
     @media (max-width: 768px) {
       .n98 {
-        right: 1rem;
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
+       position: fixed;
+      right: 2rem;
+      top: 90%;
+      transform: translateY(-50%);
+      z-index: 999;
+      width: 190px;
+      height: 40px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ffa726 0%, #ffa726 100%);
+      border: solid 2px #ff3f04;
+      color: #000;
+      font-size: 19px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: pulse-picker 2s infinite;
       }
 
       .n99 {

@@ -519,3 +519,6 @@ a:visited {
 a:hover {
     color: #fff
 }
+@media (max-width: 767px) {
+    .ad-desktop-only { display: none !important; }
+}
